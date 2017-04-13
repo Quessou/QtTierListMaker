@@ -8,12 +8,23 @@ ApplicationWindow {
     height: 480
     title: qsTr("Hello World")
 
+    header: ToolBar {
+        RowLayout {
+            anchors.fill : parent
+            ToolButton {
+                text : "coucou"
+            }
+        }
+    }
+
+
     SwipeView {
         id: swipeView
         anchors.fill: parent
         currentIndex: tabBar.currentIndex
 
-        Page1 {
+        MainPage {
+            backgroundColor: "black"
         }
 
         Page {
