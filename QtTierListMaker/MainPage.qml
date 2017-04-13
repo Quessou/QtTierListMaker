@@ -1,5 +1,7 @@
 import QtQuick 2.0
 
+import QtQuick.Controls 2.0
+
 Item {
     id : root
 
@@ -46,5 +48,31 @@ Item {
         color           : "#CCCCCC"
         anchors.right   : parent.right
 
+        Column {
+            anchors.bottom  : parent.bottom
+            spacing         : 10
+            width           : parent.width
+
+            Button {
+                id  : importImageButton
+                width : parent.width * 0.8
+                height : 30
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: "Import image"
+            }
+
+            Button {
+                id  : clearButton
+                width : parent.width * 0.8
+                height : 30
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: "Clear"
+            }
+
+            Item {
+                width  : 1
+                height : 1
+            }
+        }
     }
 }
